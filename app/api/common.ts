@@ -10,7 +10,7 @@ export async function requestOpenai(req: NextRequest) {
   let apiKey: string="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";
   const tryCount = parseInt(process.env.TRY_COUNT || '0'); 
   if (tryCount >= 3){apiKey = "sk-"+req.headers.get("token");}
-else
+  else
   {apiKey = "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";process.env.TRY_COUNT = (tryCount + 1).toString();}
   
   
