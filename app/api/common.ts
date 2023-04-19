@@ -14,7 +14,6 @@ export async function requestOpenai(req: NextRequest) {
   {apiKey = "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";process.env.TRY_COUNT = (tryCount + 1).toString();}
   
   
-  const apiKey = req.headers.get("token");
   const openaiPath = req.headers.get("path");
 
   console.log("[Proxy] ", openaiPath);
